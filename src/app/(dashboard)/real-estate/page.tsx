@@ -8,13 +8,13 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export default async function Page() {
-  const data = await prisma.post.findMany();
+  const data = await prisma.realEstate.findMany();
   
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold capitalize">news</h1>
-        <Link href="/news/new">
+        <h1 className="text-2xl font-bold capitalize">real-estate</h1>
+        <Link href="/real-estate/new">
           <Button>Add New</Button>
         </Link>
       </div>
